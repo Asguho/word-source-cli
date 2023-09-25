@@ -1,4 +1,4 @@
-import { parse, stringify } from "https://deno.land/x/xml@2.1.1/mod.ts";
+import * as xmljs from "npm:xml-js";
 import data_dir from "https://deno.land/x/dir@1.5.1/data_dir/mod.ts";
 import metadata from "./metadata.json" assert { type: "json" };
 
@@ -51,7 +51,7 @@ function convertToSourceFormat(data) {
 
 let json;
 try {
-  json = parse(
+  json = xmljs.xml2js(
     await Deno.readTextFile(data_dir() + "/Microsoft/Bibliography/Sources.xml"),
   );
   json["xml"]["@version"] = "1.0";
@@ -117,7 +117,7 @@ if (Deno.args.length > 0) {
   }
   await Deno.writeTextFile(
     data_dir() + "/Microsoft/Bibliography/Sources.xml",
-    stringify(json),
+    xmljs.js2xml(json),
   );
 } else {
   while (true) {
