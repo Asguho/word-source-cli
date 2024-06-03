@@ -1,18 +1,7 @@
-# Word Source CLI
+# Tauri + SvelteKit + TypeScript
 
-## Usage
+This template should help get you started developing with Tauri, SvelteKit and TypeScript in Vite.
 
-## Installation
+## Recommended IDE Setup
 
-### Command Line
-
-If you have [Deno](https://deno.com/), you can run the CLI with this command:
-
-```bash
-deno run -A https://raw.githubusercontent.com/Asguho/word-source-cli/main/main.js
-```
-
-### Install executable
-
-You can download the executable from the
-[release page](https://github.com/Asguho/word-source-cli/releases/latest)
+[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer).
